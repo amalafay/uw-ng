@@ -1,0 +1,71 @@
+<!-- HERO -->
+<section class="header-cursos-especializados">
+  <img src="assets/img/cursos-especializados-header.jpg" alt="Cursos Especializados" class="header-image" />
+
+  <div class="header-overlay">
+    <div class="header-content">
+      <h1>CURSOS ESPECIALIZADOS</h1>
+      <p>
+        Formación avanzada reservada para operadores tácticos, escoltas de alto
+        nivel y fuerzas especiales. Estos cursos representan el máximo nivel de
+        exigencia física, técnica y mental, combinando entrenamiento en múltiples
+        entornos y escenarios realistas. Solo acceden quienes hayan completado
+        los módulos anteriores con excelencia.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CARDS -->
+<section class="cards-especializados">
+  <div class="cards-especializados-container">
+    <div class="card-especializado" *ngFor="let curso of cursos"
+      [ngStyle]="{ 'background-image': 'url(' + curso.imagen + ')' }">
+      <div class="icono-superior">
+        <img [src]="curso.icono" alt="icono curso" />
+      </div>
+
+      <h3 class="titulo">{{ curso.titulo }}</h3>
+      <p class="subtitulo">{{ curso.subtitulo }}</p>
+
+      <div class="overlay-inferior">
+        <p class="descripcion">{{ curso.descripcion }}</p>
+        <div class="divider-roja"></div>
+
+        <ul class="lista-habilidades">
+          <li *ngFor="let item of curso.habilidades">🎯 {{ item }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULARIO EMPRESARIAL -->
+<section class="formulario-especializado">
+  <h2>PERSONALIZACIÓN DE ENTRENAMIENTO</h2>
+  <p>
+    Ofrecemos simulaciones y soluciones a medida para empresas, diseñadas para
+    abordar necesidades específicas de seguridad y capacitación táctica.
+  </p>
+
+  <form [formGroup]="form" (ngSubmit)="enviar()">
+    <div class="form-grid">
+      <input type="text" formControlName="razonSocial" placeholder="Razón Social / Empresa" />
+      <input type="text" formControlName="ruc" placeholder="RUC" />
+      <input type="text" formControlName="ubicacion" placeholder="Ubicación (Ciudad/País)" />
+      <input type="text" formControlName="rubro" placeholder="Rubro de la empresa" />
+      <input type="number" formControlName="personal" placeholder="Número de personal a capacitar" />
+      <input type="email" formControlName="correo" placeholder="Correo electrónico de contacto" />
+    </div>
+
+    <textarea formControlName="necesidades" placeholder="Necesidades específicas de capacitación..."
+      rows="4"></textarea>
+
+    <p class="nota-especializado">
+      *Toda solicitud está sujeta a verificación de seguridad y perfil del
+      solicitante mediante API del Ministerio del Interior.
+    </p>
+
+    <button type="submit">SOLICITAR PROPUESTA PERSONALIZADA</button>
+  </form>
+</section>

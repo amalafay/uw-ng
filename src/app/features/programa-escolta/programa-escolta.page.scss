@@ -1,0 +1,329 @@
+.escolta-page {
+  background-color: #000;
+  color: #fff;
+  font-family: var(--font-contenido, 'Open Sans', sans-serif);
+}
+
+/* ========== HERO / HEADER ========== */
+
+.escolta-header-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-family: var(--font-titulos, 'Oswald', sans-serif);
+}
+
+.escolta-header-img {
+  position: relative;
+}
+
+.escolta-header-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.escolta-header-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+  max-width: 900px;
+}
+
+.escolta-header-overlay h1 {
+  font-size: 3rem;
+  font-family: var(--font-titulos, 'Oswald', sans-serif);
+  color: var(--color-secundario, #d4af37);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.escolta-header-overlay p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #eee;
+}
+
+/* ========== CARDS PROGRAMA ESCOLTA ========== */
+
+.cards-escolta-section {
+  background-color: #000;
+  color: #fff;
+  padding: 5rem 2rem;
+  font-family: var(--font-contenido, 'Open Sans', sans-serif);
+}
+
+.cards-escolta-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-escolta {
+  background-color: #111;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  min-height: 500px;
+}
+
+.card-escolta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+}
+
+.titulo {
+  font-weight: bold;
+  color: var(--color-primario, #b20000);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.tema {
+  color: var(--color-secundario, #d4af37);
+  margin-top: 2rem;
+  font-size: 1.3rem;
+}
+
+.descripcion {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+.divider {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-primario, #b20000);
+  margin: 1rem 0;
+}
+
+.divider-white {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-texto, #f5f5f5);
+  margin: 1rem 0;
+}
+
+.habilidades-titulo {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.habilidades-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.habilidades-lista li::before {
+  content: '●';
+  color: #d4af37;
+  padding-right: 0.5rem;
+}
+
+.duracion {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #bbb;
+}
+
+.icono-bottom {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1rem;
+}
+
+/* ========== CERTIFICACIÓN ========== */
+
+.certificacion-escolta-section {
+  background-color: #111;
+  color: #fff;
+  padding: 5rem 2rem;
+  text-align: center;
+  font-family: var(--font-contenido, 'Open Sans', sans-serif);
+}
+
+.certificacion-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.certificacion-escolta-section h2 {
+  font-family: var(--font-titulos, 'Oswald', sans-serif);
+  color: var(--color-secundario, #d4af37);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.certificacion-text {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.certificacion-card-info {
+  background-color: #222;
+  border-left: 5px solid var(--color-primario, #b20000);
+  padding: 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  color: var(--color-secundario, #d4af37);
+  font-size: 1.2rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* ========== FORMULARIO ========== */
+
+.form-escolta-section {
+  background-color: #000;
+  color: #fff;
+  padding: 5rem 2rem;
+  font-family: var(--font-contenido, 'Open Sans', sans-serif);
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #111;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.form-escolta-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-secundario, #d4af37);
+  margin-bottom: 2rem;
+  font-family: var(--font-titulos, 'Oswald', sans-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.form-escolta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-escolta label {
+  color: #ccc;
+  font-weight: bold;
+}
+
+.form-escolta input,
+.form-escolta select {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.form-escolta input::placeholder {
+  color: #888;
+}
+
+.form-escolta button {
+  padding: 0.8rem;
+  background-color: var(--color-primario, #b20000);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-escolta button:hover {
+  background-color: var(--color-detalle-dorado, #d4af37);
+  color: #000;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 992px) {
+  .cards-escolta-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .form-escolta-section,
+  .certificacion-escolta-section {
+    padding: 4rem 1.5rem;
+  }
+  .escolta-header-img img{
+    height: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .escolta-header-overlay {
+    padding: 1rem;
+    max-width: 100%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+.escolta-header-img img{
+    height: 280px;
+  }
+  .escolta-header-overlay h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .escolta-header-overlay p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .cards-escolta-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-escolta {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .icono-bottom {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 520px) {
+  .cards-escolta-section,
+  .form-escolta-section,
+  .certificacion-escolta-section {
+    padding: 3rem 1.2rem;
+  }
+
+  .form-container {
+    padding: 1.5rem;
+  }
+}

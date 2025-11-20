@@ -1,0 +1,35 @@
+<section class="blog-list-section">
+  <div class="blog-list-container">
+
+    <h1 class="blog-list-title">NUESTRO BLOG</h1>
+
+    <div class="blog-grid">
+      <article class="blog-card" *ngFor="let post of posts">
+        <!-- Imagen -->
+        <div class="blog-card__image-wrapper" [routerLink]="['/blog', post.slug]">
+          <img class="blog-card__image" [src]="post.image" [alt]="post.title" />
+        </div>
+
+        <!-- Contenido -->
+        <div class="blog-card__content">
+          <h2 class="blog-card__title" [routerLink]="['/blog', post.slug]">
+            {{ post.title }}
+          </h2>
+
+          <p class="blog-card__meta">
+            Por {{ post.author }} | {{ post.date | date : 'dd/MM/yyyy' }}
+          </p>
+
+          <p class="blog-card__summary">
+            {{ post.summary }}
+          </p>
+
+          <!-- ✅ Un solo botón “LEER MÁS” que navega al detalle -->
+          <button class="blog-card__button" [routerLink]="['/blog', post.slug]">
+            LEER MÁS
+          </button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,39 @@
+<section class="contacto-uw-section">
+  <div class="contacto-uw-container">
+    <h2>CONTÁCTANOS AHORA</h2>
+
+    <p class="intro">
+      ¿Tienes preguntas, necesitas más información o quieres una propuesta
+      personalizada? <br />
+      ¡Estamos listos para escucharte!
+    </p>
+
+    <div class="form-block">
+      <h3>FILTRO DE SEGURIDAD PARA CURSOS</h3>
+
+      <p class="descripcion">
+        Para garantizar la seguridad y el perfil adecuado de nuestros
+        participantes, realizamos una verificación inicial. Por favor, completa
+        los siguientes datos.
+      </p>
+
+      <form [formGroup]="form" (ngSubmit)="enviar()" class="formulario-uw-contacto">
+        <label>Curso de Interés:</label>
+        <select formControlName="curso">
+          <option value="">Selecciona un curso</option>
+          <option *ngFor="let c of cursos">{{ c }}</option>
+        </select>
+
+        <label>DNI / Carnet de Extranjería:</label>
+        <input type="text" formControlName="documento" placeholder="Ingresa tu número de documento" />
+
+        <label class="check-legal">
+          <input type="checkbox" formControlName="autorizado" />
+          Autorizo la verificación de mis antecedentes según la Ley N° 30150.
+        </label>
+
+        <button type="submit">VERIFICAR ELEGIBILIDAD</button>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,123 @@
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* HEADER */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 3vw;
+  background: #000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-text {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #b20000;
+}
+
+/* NAV DESKTOP */
+.main-nav {
+  display: flex;
+  gap: 1.4rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.main-nav a {
+  position: relative;
+  padding-bottom: 0.25rem;
+  color: #ffffff;
+  opacity: 0.9;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.2s ease;
+}
+
+.main-nav a:hover {
+  opacity: 1;
+}
+
+.main-nav a.active {
+  opacity: 1;
+}
+
+.main-nav a.active::after {
+  width: 100%;
+}
+
+/* BOTÓN HAMBURGUESA: OCULTO EN DESKTOP */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: #ffffff;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* MAIN + FOOTER */
+.main-content {
+  padding: 0;
+}
+
+.main-footer {
+  padding: 0.85rem 3vw;
+  font-size: 0.8rem;
+  text-align: center;
+  background: #000;
+  color: #ffffff;
+  opacity: 0.85;
+}
+
+/* ✅ RESPONSIVE SOLO AQUÍ: HAMBURGUESA EN MÓVIL */
+@media (max-width: 900px) {
+  .main-header {
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem 3vw 1rem;
+    background: #000000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .main-nav a {
+    padding-bottom: 0.15rem;
+  }
+}

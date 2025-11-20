@@ -1,0 +1,68 @@
+<section class="home-page">
+  <!-- HERO CON VIDEO -->
+  <section class="hero-video">
+    <video #heroVideo class="hero-video__media" autoplay muted loop playsinline>
+      <source src="assets/video/hero-uw.mp4" type="video/mp4" />
+      Tu navegador no soporta video HTML5.
+    </video>
+
+    <div class="hero-video__overlay"></div>
+
+    <div class="hero-video__content">
+      <h2 class="hero-video__subtitle">VELOCIDAD EN EL DESENFUNDE</h2>
+      <h1 class="hero-video__title">PRECISIÓN EN EL IMPACTO</h1>
+
+      <button class="hero-video__audio-btn" (click)="toggleAudio()">
+        {{ audioEnabled ? '🔇 DESACTIVAR AUDIO' : '🔊 ACTIVAR AUDIO' }}
+      </button>
+    </div>
+  </section>
+
+  <!-- CARDS DE PROGRAMAS -->
+  <section class="program-cards">
+    <article class="program-card" routerLink="/certificacion-trc">
+      <div class="program-card__image">
+        <img src="assets/img/certificacion-trc.png" alt="Certificación TRC" />
+      </div>
+      <div class="program-card__body">
+        <h3>CERTIFICACIÓN TRC</h3>
+      </div>
+    </article>
+
+    <article class="program-card" routerLink="/programa-escolta">
+      <div class="program-card__image">
+        <img src="assets/img/programa-escolta.jpg" alt="Programa Escolta" />
+      </div>
+      <div class="program-card__body">
+        <h3>PROGRAMA ESCOLTA</h3>
+      </div>
+    </article>
+
+    <article class="program-card" routerLink="/defensa-urbana">
+      <div class="program-card__image">
+        <img src="assets/img/defensa-urbana.jpg" alt="Defensa Urbana" />
+      </div>
+      <div class="program-card__body">
+        <h3>DEFENSA URBANA</h3>
+      </div>
+    </article>
+
+    <article class="program-card" routerLink="/manejo-tactico">
+      <div class="program-card__image">
+        <img src="assets/img/manejo-tactico.jpg" alt="Manejo Táctico" />
+      </div>
+      <div class="program-card__body">
+        <h3>MANEJO TÁCTICO</h3>
+      </div>
+    </article>
+
+    <article class="program-card" routerLink="/cursos-especializados">
+      <div class="program-card__image">
+        <img src="assets/img/cursos-especializados.jpg" alt="Cursos Especializados" />
+      </div>
+      <div class="program-card__body">
+        <h3>CURSOS ESPECIALIZADOS</h3>
+      </div>
+    </article>
+  </section>
+</section>

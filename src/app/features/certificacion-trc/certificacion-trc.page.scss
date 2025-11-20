@@ -1,0 +1,340 @@
+::host {
+  display: block;
+}
+
+.trc-section {
+  background-color: #000;
+  color: #fff;
+  font-family: var(--font-contenido);
+}
+
+/* Cabecera */
+.trc-header {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  position: relative;
+}
+
+.trc-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.trc-overlay h1 {
+  font-family: var(--font-titulos);
+  font-size: 2.8rem;
+  color: var(--color-secundario);
+  margin-bottom: 1rem;
+}
+
+.trc-overlay p {
+  font-family: var(--font-titulos);
+  font-size: 1.2rem;
+  color: #ddd;
+  max-width: 700px;
+}
+
+/* ¿Qué es TRC? */
+.trc-info {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.trc-title-row {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.trc-title-row h2 {
+  font-family: var(--font-titulos);
+  font-size: 2.5rem;
+  color: var(--color-secundario);
+}
+
+.trc-title-row .highlight-red {
+  color: var(--color-primario);
+}
+
+.divider {
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-primario);
+  margin: 0.8rem auto 2rem auto;
+}
+
+.trc-info p {
+  font-size: 1.05rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Secciones de cards */
+.certi-section {
+  padding: 4rem 2rem;
+  background-color: #111;
+  text-align: center;
+}
+
+.certi-titulo {
+  font-size: 2.5rem;
+  font-family: var(--font-titulos);
+  color: var(--color-secundario);
+  margin-bottom: 0.5rem;
+}
+
+.certi-section .highlight-red {
+  color: var(--color-primario);
+}
+
+.certi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.certi-card {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 12px;
+  color: #ddd;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.certi-card img {
+  height: 64px;
+  margin-bottom: 1rem;
+}
+
+.certi-card h3 {
+  color: var(--color-secundario);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-titulos);
+}
+
+.certi-card p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.certi-card:hover {
+  transform: translateY(-6px);
+  background-color: #2a2a2a;
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.5);
+}
+
+/* Lista en áreas críticas */
+.custom-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ddd;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: var(--font-contenido);
+  text-align: left;
+  max-width: 600px;
+}
+
+.custom-list li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #d4af37;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Resultados */
+.resultados-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+}
+
+.resultados-texto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.resultados-texto h2 {
+  font-size: 2.5rem;
+  font-family: var(--font-titulos);
+  color: var(--color-secundario);
+  margin-bottom: 1rem;
+}
+
+.resultados-texto .highlight-red {
+  color: var(--color-primario);
+}
+
+.resultados-texto p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+.resultados-imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.resultados-imagen img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Listas de texto largo */
+.renovacion-lista {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.renovacion-lista li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.renovacion-lista li::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #d4af37;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Bloque largo */
+.trc-longtext {
+  padding: 4rem 2rem;
+  background-color: #000;
+}
+
+.trc-longtext-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.trc-longtext-inner h3 {
+  font-family: var(--font-titulos);
+  font-size: 2rem;
+  color: var(--color-secundario);
+  margin: 2rem 0 1rem;
+}
+
+/* Sección renovación final */
+.renovacion-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem 5rem;
+  text-align: center;
+}
+
+.renovacion-container h2 {
+  font-size: 2.5rem;
+  font-family: var(--font-titulos);
+  color: var(--color-secundario);
+  margin-bottom: 2rem;
+}
+
+.renovacion-container .highlight-red {
+  color: var(--color-primario);
+}
+
+.renovacion-descripcion,
+.renovacion-cta {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.renovacion-boton {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background-color: #b20000;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.renovacion-boton:hover {
+  background-color: #d4af37;
+  color: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .trc-header {
+    height: 260px;
+  }
+
+  .trc-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .trc-info,
+  .certi-section,
+  .resultados-container,
+  .trc-longtext,
+  .renovacion-container {
+    padding: 2.5rem 1.2rem;
+  }
+
+  .resultados-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .custom-list li {
+    text-align: left;
+  }
+
+  .trc-longtext-inner h3 {
+    font-size: 1.7rem;
+  }
+
+  .renovacion-descripcion {
+    text-align: justify;
+  }
+}

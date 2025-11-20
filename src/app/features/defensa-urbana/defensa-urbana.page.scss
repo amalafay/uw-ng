@@ -1,0 +1,292 @@
+.defensa-page {
+  background-color: #000;
+  color: #fff;
+  font-family: var(--font-contenido, 'Open Sans', sans-serif);
+}
+
+/* ========== HERO / HEADER DEFENSA URBANA ========== */
+
+.header-defensa {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-family: var(--font-titulos, 'Oswald', sans-serif);
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.header-content {
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  color: var(--color-secundario, #d4af37);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  color: #ddd;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ========== CARDS DEFENSA URBANA ========== */
+
+.cards-defensa {
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 2rem;
+  font-family: var(--font-contenido, 'Open Sans', sans-serif);
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-defensa {
+  background-color: #111;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 330px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  text-align: left;
+}
+
+.card-defensa:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(255, 215, 0, 0.3);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h3 {
+  color: var(--color-secundario, #d4af37);
+  font-size: 1rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.card-defensa h4 {
+  font-family: var(--font-titulos, 'Oswald', sans-serif);
+  margin: 0.8rem 0 0.4rem;
+  font-size: 1.1rem;
+  color: var(--color-detalle-dorado, #d4af37);
+}
+
+.descripcion {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.divider-red {
+  height: 3px;
+  background-color: var(--color-primario, #b20000);
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.card-defensa h5 {
+  color: var(--color-secundario, #d4af37);
+  font-size: 0.95rem;
+  margin: 0.8rem 0 0.4rem;
+}
+
+.card-defensa ul {
+  padding-left: 1.2rem;
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.card-defensa ul li {
+  margin-bottom: 0.4rem;
+  text-align: justify;
+  list-style-type: '🎯 ';
+}
+
+.divider {
+  height: 2px;
+  background-color: #333;
+  margin: 1rem 0;
+}
+
+.requisito {
+  color: orange;
+  font-size: 0.95rem;
+}
+
+/* ========== FORMULARIO DEFENSA URBANA ========== */
+
+.formulario-defensa-section {
+  background-color: #111;
+  color: #fff;
+  padding: 4rem 2rem;
+  font-family: var(--font-contenido, 'Open Sans', sans-serif);
+  text-align: center;
+}
+
+.form-container-defensa {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #000;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.formulario-defensa-section h2 {
+  font-family: var(--font-titulos, 'Oswald', sans-serif);
+  color: var(--color-secundario, #d4af37);
+  margin-bottom: 2rem;
+}
+
+.formulario-defensa-form {
+  background-color: #000;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.formulario-defensa-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.formulario-defensa-form input,
+.formulario-defensa-form select {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #222;
+  color: #fff;
+  margin-top: 0.4rem;
+  font-family: inherit;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.formulario-defensa-form button {
+  background-color: var(--color-primario, #b20000);
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: var(--font-contenido, 'Open Sans', sans-serif);
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.formulario-defensa-form button:hover {
+  background-color: var(--color-secundario, #d4af37);
+  color: #000;
+}
+
+.text-ul-defensa {
+  text-align: justify;
+  font-size: 0.95rem;
+  color: #ddd;
+  margin-bottom: 2rem;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 992px) {
+  .cards-defensa {
+    padding: 4rem 1.5rem;
+  }
+  .header-defensa img{
+    height: 360px;
+  }
+  .formulario-defensa-section {
+    padding: 4rem 1.5rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .header-overlay {
+    padding: 0 1.2rem;
+  }
+.header-defensa img{
+    height: 280px;
+  }
+  .header-content h1 {
+    font-size: 2rem;
+  }
+
+  .header-content p {
+    font-size: 1rem;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-defensa {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .form-container-defensa {
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .cards-defensa,
+  .formulario-defensa-section {
+    padding: 3rem 1.2rem;
+  }
+
+  .form-container-defensa {
+    padding: 1.5rem;
+  }
+}

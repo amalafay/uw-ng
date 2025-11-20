@@ -1,0 +1,29 @@
+<section class="blog-detail-section" *ngIf="post as p">
+  <div class="blog-detail-container">
+
+    <button class="back-button" [routerLink]="['/blog']">
+      ← VOLVER AL BLOG
+    </button>
+
+    <h1 class="detail-title">{{ p.title }}</h1>
+
+    <p class="detail-meta">
+      Por {{ p.author }} | {{ p.date | date : 'yyyy-MM-dd' }}
+    </p>
+
+    <div class="detail-image-wrapper">
+      <img [src]="p.image" class="detail-image" />
+    </div>
+
+    <article class="detail-content">
+      <p *ngFor="let paragraph of paragraphs">
+        {{ paragraph }}
+      </p>
+    </article>
+
+    <p class="detail-author-footer">
+      {{ p.author }}
+    </p>
+
+  </div>
+</section>

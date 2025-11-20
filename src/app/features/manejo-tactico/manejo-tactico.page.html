@@ -1,0 +1,120 @@
+<section class="mt-header">
+  <img src="assets/img/manejo-tactico-header.jpg" alt="Manejo Táctico" />
+  <div class="mt-overlay">
+    <h1>MANEJO TÁCTICO</h1>
+    <p>
+      Entrenamiento especializado en conducción táctica para anticipar, prevenir
+      y reaccionar ante amenazas en movimiento. Aplicable a seguridad ejecutiva,
+      fuerzas especiales y sector minero.
+    </p>
+  </div>
+</section>
+
+<!-- CARDS -->
+<section class="mt-cards">
+  <div class="mt-cards-container">
+    <div class="mt-card" *ngFor="let card of cards; let i = index">
+      <div class="mt-card-header">
+        <h3>{{ card.titulo }}</h3>
+
+        <span *ngIf="i === 3" class="badge-nuevo">NUEVO</span>
+      </div>
+
+      <h4>{{ card.tema }}</h4>
+      <p class="descripcion">{{ card.descripcion }}</p>
+
+      <div class="divider-red"></div>
+
+      <h5>ENFOQUE PRINCIPAL:</h5>
+      <ul>
+        <li *ngFor="let h of card.habilidades">{{ h }}</li>
+      </ul>
+
+      <div class="divider"></div>
+
+      <p class="duracion">Duración: 32 horas (ó 4 días)</p>
+    </div>
+  </div>
+</section>
+
+<!-- SIMULACIONES REALES -->
+<section class="mt-simulaciones">
+  <h2>SIMULACIONES REALES</h2>
+  <div class="divider"></div>
+
+  <div class="sim-wrapper">
+    <div class="sim-box">
+      <h3>ESCENARIOS PRACTICADOS:</h3>
+      <ul>
+        <li>Persecuciones urbanas y rurales</li>
+        <li>Ataques con múltiples vehículos agresores</li>
+        <li>Fallos mecánicos inducidos en movimiento</li>
+        <li>Evacuación bajo condiciones climáticas extremas</li>
+        <li>Protección de convoy con vehículos civiles</li>
+      </ul>
+    </div>
+
+    <div class="sim-box">
+      <h3>METODOLOGÍA:</h3>
+      <ul>
+        <li>Entrenamiento progresivo de dificultad</li>
+        <li>Vehículos reales en pistas especializadas</li>
+        <li>Instructores con experiencia operativa real</li>
+        <li>Análisis post-ejercicio con video feedback</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFICIOS EMPRESARIALES -->
+<section class="mt-beneficios">
+  <h2>BENEFICIOS EMPRESARIALES</h2>
+  <div class="divider"></div>
+
+  <ul class="benef-list">
+    <li>Reducción de hasta 60% en accidentes vehiculares según estadísticas propias</li>
+    <li>Certificación reconocida por el Ministerio de Energía y Minas</li>
+    <li>Programas adaptables a flotas vehiculares específicas</li>
+    <li>Entrenamiento in situ en instalaciones mineras</li>
+  </ul>
+</section>
+
+<!-- FORMULARIO -->
+<section class="mt-form">
+  <div class="form-container">
+    <h2>SOLICITUD DE INFORMES</h2>
+
+    <form [formGroup]="form" (ngSubmit)="enviar()">
+      <label>Nombre completo:</label>
+      <input formControlName="nombre" type="text" placeholder="Tu nombre" />
+
+      <label>Correo electrónico:</label>
+      <input formControlName="correo" type="email" placeholder="Tu email" />
+
+      <label>Teléfono:</label>
+      <input formControlName="telefono" type="text" placeholder="Tu teléfono" />
+
+      <label>Nivel de interés:</label>
+      <select formControlName="nivel">
+        <option value="">Selecciona una opción</option>
+        <option>NIVEL I - Fundamentos Defensivos</option>
+        <option>NIVEL II - Conducción bajo presión</option>
+        <option>NIVEL III - Operaciones Tácticas en Equipo</option>
+        <option>CURSO TÁCTICO 4 X 4 - Sector Minero y Zonas Remotas</option>
+      </select>
+
+      <button type="submit">ENVIAR SOLICITUD</button>
+    </form>
+
+    <div class="form-cta">
+      <h3>¿NECESITAS UN PROGRAMA PERSONALIZADO?</h3>
+      <p>
+        Contamos con programas adaptados para fuerzas policiales, empresas mineras y seguridad privada.
+      </p>
+
+      <a routerLink="/contacto" class="cta-btn">
+        CONTÁCTANOS PARA UNA RESPUESTA
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,370 @@
+/* -----------------------------
+   HERO
+------------------------------*/
+.mt-header {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(0.45);
+  }
+}
+
+.mt-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+
+  h1 {
+    font-family: var(--font-titulos);
+    font-size: 3rem;
+    color: var(--color-secundario);
+  }
+
+  p {
+    color: #eee;
+    font-size: 1.2rem;
+    max-width: 900px;
+  }
+}
+
+/* -----------------------------
+   CARDS
+------------------------------*/
+.mt-cards {
+  background-color: #000;
+  padding: 5rem 2rem;
+  color: #fff;
+}
+
+.mt-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.mt-card {
+  width: 330px;
+  background: #111;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px #000;
+  transition: 0.3s;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(255, 215, 0, 0.3);
+  }
+}
+
+.mt-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h3 {
+    color: #d4af37;
+    margin: 0;
+    font-size: 1rem;
+  }
+}
+
+.badge-nuevo {
+  background-color: #b20000;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.mt-card h4 {
+  font-family: var(--font-titulos);
+  color: #d4af37;
+  margin-top: 1rem;
+}
+
+.descripcion {
+  color: #ccc;
+}
+
+/* -----------------------------
+   SIMULACIONES
+------------------------------*/
+
+.mt-simulaciones {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+
+  h2 {
+    font-family: var(--font-titulos);
+    font-size: 2.4rem;
+    color: var(--color-secundario);
+  }
+}
+
+.sim-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sim-box {
+  background: #240000;
+  padding: 2rem;
+  width: 480px;
+  border-radius: 12px;
+  color: #ddd;
+
+  h3 {
+    color: var(--color-secundario);
+    margin-bottom: 1rem;
+  }
+
+  li {
+    margin-bottom: 0.6rem;
+  }
+}
+
+/* -----------------------------
+   BENEFICIOS
+------------------------------*/
+.mt-beneficios {
+  background: #0a0f1c;
+  padding: 4rem 2rem;
+  color: #fff;
+  text-align: center;
+
+  h2 {
+    font-family: var(--font-titulos);
+    font-size: 2.4rem;
+  }
+}
+
+.benef-list {
+  max-width: 900px;
+  margin: 2rem auto 0;
+  list-style: none;
+
+  li {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2rem;
+
+    &::before {
+      content: "✔";
+      color: var(--color-primario);
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
+/* -----------------------------
+   FORMULARIO
+------------------------------*/
+.mt-form {
+  background: #000;
+  padding: 4rem 2rem;
+  color: #fff;
+}
+
+.form-container {
+  max-width: 600px;
+  background: #111;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  input,
+  select {
+    background: #222;
+    border: none;
+    padding: 0.8rem;
+    color: #fff;
+    border-radius: 6px;
+  }
+
+  button {
+    background: var(--color-primario);
+    color: #fff;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.form-cta {
+  margin-top: 2rem;
+  text-align: center;
+
+  h3 {
+    color: var(--color-secundario);
+  }
+
+  p {
+    color: #ccc;
+  }
+}
+
+.cta-btn {
+  display: inline-block;
+  background: var(--color-primario);
+  padding: 0.8rem 1.8rem;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+
+/* ============================================================
+   RESPONSIVE – ≤ 992px (TABLET / LAPTOP CHICA)
+   ============================================================ */
+@media (max-width: 992px) {
+  .mt-hero-overlay {
+    max-width: 700px;
+    padding: 1.5rem;
+  }
+
+  .mt-hero-overlay h1 {
+    font-size: 2.4rem;
+  }
+
+  .mt-hero-overlay p {
+    font-size: 1.1rem;
+  }
+
+  .mt-cards-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .mt-cards-container {
+    gap: 1.5rem;
+  }
+
+  .mt-card {
+    width: 320px;
+  }
+
+  .mt-info-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .mt-form-section {
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE – ≤ 768px (TABLET VERTICAL)
+   ============================================================ */
+@media (max-width: 768px) {
+  /* HERO */
+  .mt-hero-overlay {
+    padding: 1.2rem;
+    max-width: 100%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .mt-hero-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .mt-hero-overlay p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  /* CARDS */
+  .mt-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mt-card {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  /* INFO */
+  .mt-info-section h2 {
+    font-size: 1.9rem;
+  }
+
+  .mt-form-container {
+    padding: 1.5rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE – ≤ 520px (CELULAR PEQUEÑO)
+   ============================================================ */
+@media (max-width: 520px) {
+  .mt-hero-overlay {
+    padding: 1rem 0.8rem;
+  }
+
+  .mt-hero-overlay h1 {
+    font-size: 1.6rem;
+  }
+
+  .mt-hero-overlay p {
+    font-size: 0.9rem;
+  }
+
+  .mt-cards-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .mt-card {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+
+  .mt-info-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .mt-info-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .mt-form-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .mt-form-container {
+    padding: 1.4rem;
+  }
+
+  .mt-form-container h2 {
+    font-size: 1.6rem;
+  }
+}
