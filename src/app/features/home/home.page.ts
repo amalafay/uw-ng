@@ -1,10 +1,13 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
+  imports: [CommonModule, RouterModule],
 })
 export class HomePage implements AfterViewInit {
   @ViewChild('heroVideo', { static: false }) heroVideo?: ElementRef<HTMLVideoElement>;

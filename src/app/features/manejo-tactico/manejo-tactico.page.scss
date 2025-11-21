@@ -1,3 +1,13 @@
+/* ============================================================
+   ROOT – Evitar desborde horizontal en esta página
+============================================================ */
+:host {
+  display: block;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden; // 👈 elimina scroll horizontal
+}
+
 /* -----------------------------
    HERO
 ------------------------------*/
@@ -11,6 +21,7 @@
     height: 400px;
     object-fit: cover;
     filter: brightness(0.45);
+    display: block;
   }
 }
 
@@ -130,6 +141,7 @@
   background: #240000;
   padding: 2rem;
   width: 480px;
+  max-width: 100%; // 👈 evita desborde en móviles
   border-radius: 12px;
   color: #ddd;
 
@@ -207,6 +219,8 @@ form {
     padding: 0.8rem;
     color: #fff;
     border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   button {
@@ -242,26 +256,28 @@ form {
   text-decoration: none;
 }
 
-
 /* ============================================================
-   RESPONSIVE – ≤ 992px (TABLET / LAPTOP CHICA)
-   ============================================================ */
+   RESPONSIVE – ≤ 992px (TABLET / LAPTOP PEQUEÑA)
+============================================================ */
 @media (max-width: 992px) {
-  .mt-hero-overlay {
-    max-width: 700px;
-    padding: 1.5rem;
+  .mt-header img {
+    height: 340px;
   }
 
-  .mt-hero-overlay h1 {
+  .mt-overlay {
+    padding: 0 1.5rem;
+  }
+
+  .mt-overlay h1 {
     font-size: 2.4rem;
   }
 
-  .mt-hero-overlay p {
+  .mt-overlay p {
     font-size: 1.1rem;
   }
 
-  .mt-cards-section {
-    padding: 3rem 1.5rem;
+  .mt-cards {
+    padding: 3.5rem 1.5rem;
   }
 
   .mt-cards-container {
@@ -269,35 +285,34 @@ form {
   }
 
   .mt-card {
-    width: 320px;
+    width: 300px;
   }
 
-  .mt-info-section {
-    padding: 3rem 1.5rem;
-  }
-
-  .mt-form-section {
-    padding: 3rem 1.5rem;
+  .mt-simulaciones,
+  .mt-beneficios,
+  .mt-form {
+    padding: 3.5rem 1.5rem;
   }
 }
 
 /* ============================================================
-   RESPONSIVE – ≤ 768px (TABLET VERTICAL)
-   ============================================================ */
+   RESPONSIVE – ≤ 768px (TABLET VERTICAL / MÓVIL GRANDE)
+============================================================ */
 @media (max-width: 768px) {
   /* HERO */
-  .mt-hero-overlay {
-    padding: 1.2rem;
-    max-width: 100%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  .mt-header img {
+    height: 320px;
   }
 
-  .mt-hero-overlay h1 {
+  .mt-overlay {
+    padding: 1.2rem;
+  }
+
+  .mt-overlay h1 {
     font-size: 2rem;
   }
 
-  .mt-hero-overlay p {
+  .mt-overlay p {
     font-size: 1rem;
     line-height: 1.4;
   }
@@ -313,33 +328,54 @@ form {
     max-width: 360px;
   }
 
-  /* INFO */
-  .mt-info-section h2 {
-    font-size: 1.9rem;
+  /* SIMULACIONES */
+  .sim-wrapper {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .mt-form-container {
-    padding: 1.5rem;
+  .sim-box {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  /* BENEFICIOS */
+  .benef-list {
+    padding: 0 0.5rem;
+    text-align: left;
+  }
+
+  /* FORMULARIO */
+  .mt-form {
+    padding: 3rem 1.5rem;
+  }
+
+  .form-container {
+    padding: 1.8rem;
   }
 }
 
 /* ============================================================
    RESPONSIVE – ≤ 520px (CELULAR PEQUEÑO)
-   ============================================================ */
+============================================================ */
 @media (max-width: 520px) {
-  .mt-hero-overlay {
+  .mt-header img {
+    height: 260px;
+  }
+
+  .mt-overlay {
     padding: 1rem 0.8rem;
   }
 
-  .mt-hero-overlay h1 {
+  .mt-overlay h1 {
     font-size: 1.6rem;
   }
 
-  .mt-hero-overlay p {
+  .mt-overlay p {
     font-size: 0.9rem;
   }
 
-  .mt-cards-section {
+  .mt-cards {
     padding: 2.5rem 1rem;
   }
 
@@ -348,23 +384,17 @@ form {
     max-width: 100%;
   }
 
-  .mt-info-section {
+  .mt-simulaciones,
+  .mt-beneficios,
+  .mt-form {
     padding: 2.5rem 1rem;
   }
 
-  .mt-info-section h2 {
-    font-size: 1.6rem;
-  }
-
-  .mt-form-section {
-    padding: 2.5rem 1rem;
-  }
-
-  .mt-form-container {
+  .form-container {
     padding: 1.4rem;
   }
 
-  .mt-form-container h2 {
-    font-size: 1.6rem;
+  .benef-list li {
+    font-size: 1rem;
   }
 }
